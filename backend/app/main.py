@@ -9,7 +9,7 @@ from app.db.database import create_tables
 from app.api.routes import monitors, alerts, logs, dashboard, auth
 from app.api.routes.auth import verify_token
 from app.core.scheduler import start_scheduler, stop_scheduler
-from app.utils.config import ALLOWED_ORIGIN
+from app.utils.config import ALLOWED_ORIGINS
 from app.utils.helper import admin_authentication
 
 @asynccontextmanager
@@ -32,7 +32,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGIN,
+    allow_origins=[ALLOWED_ORIGINS],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
