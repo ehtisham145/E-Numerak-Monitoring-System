@@ -22,10 +22,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 15
 
 DEBUG=True
 
-raw_origins = os.getenv("ALLOWED_ORIGIN")
+raw_origins = os.getenv("ALLOWED_ORIGIN") or ""
 
 ALLOWED_ORIGINS = [origin.strip() for origin in raw_origins.split(",") if origin]
-
 
 DOCS_USERNAME=os.getenv("DOCS_USERNAME")
 
