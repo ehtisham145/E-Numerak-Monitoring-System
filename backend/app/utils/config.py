@@ -1,5 +1,7 @@
 from dotenv import load_dotenv
+
 import os
+
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL") 
@@ -19,3 +21,9 @@ DASHBOARD_PASSWORD = os.getenv("DASHBOARD_PASSWORD")
 ACCESS_TOKEN_EXPIRE_MINUTES = 15
 
 DEBUG=True
+
+ALLOWED_ORIGIN=os.getenv("ALLOWED_ORIGIN")
+
+DOCS_USERNAME=os.getenv("DOCS_USERNAME")
+
+DOCS_PASSWORD=os.getenv("DOCS_PASSWORD")
