@@ -1,0 +1,11 @@
+Step 1 — Database Design (PostgreSQL tables)
+
+Step 2 — Backend APIs (Python FastAPI)
+
+Step 3 — Monitoring Engine (server check karne wala)
+
+Step 4 — WhatsApp Alert System (Green API)
+
+Step 5 — Frontend Dashboard (React.js)
+
+Step 6 — Production Deployment
