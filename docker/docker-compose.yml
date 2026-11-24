@@ -1,3 +1,5 @@
+name: numerak-monitoring
+
 services:
   backend:
     build:
@@ -29,7 +31,7 @@ services:
     container_name: numerak-monitoring-frontend
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       backend:
         condition: service_healthy
