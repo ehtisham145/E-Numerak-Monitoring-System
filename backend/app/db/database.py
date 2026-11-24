@@ -1,14 +1,17 @@
-from sqlalchemy.ext.asyncio import create_async_engine,AsyncSession,async_sessionmaker
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
+from app.utils.config import DATABASE_URL, DEBUG
 
 class Base(DeclarativeBase):
     pass
 
 #----------------Create Data Base Engine-----------------
 """When we set echo to true then on backend we will also see sql queries in terminal"""
+db_url = DATABASE_URL or "sqlite+aiosqlite:///./monitoring.db"
+
 engine = create_async_engine(
-    "sqlite+aiosqlite:///./monitoring.db",
-    echo=True
+    db_url,
+    echo=DEBUG
 )
 
 #-------------Create Session in Data Base---------------------
