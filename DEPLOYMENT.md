@@ -52,7 +52,9 @@ chmod +x deploy.sh
 ```
 Ya direct docker compose run karein:
 ```bash
-docker compose up -d --build
+docker compose -f docker/docker-compose.yml up -d --build
+# ya
+cd docker && docker compose up -d --build
 ```
 
 Ab aapka frontend aur API port `80` par live ho chuka hai!

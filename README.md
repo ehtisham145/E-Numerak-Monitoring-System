@@ -192,3 +192,4 @@ The frontend's visual language is built around the idea that a monitoring tool i
 - Run the backend behind a process manager (e.g. `systemd`, `supervisor`, or a container orchestrator) rather than `--reload`, and restrict CORS to the known frontend origin instead of `*`.
 - Back up `monitoring.db` periodically, or migrate to a managed database if usage grows beyond a single small team.
 
+### Developed By : Ehtisham Iftikhar 
