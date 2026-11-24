@@ -47,8 +47,8 @@ Neechay diye gaye variables zaroor set karein:
 
 ### Step 4: Run Deploy Script
 ```bash
-chmod +x deploy.sh
-./deploy.sh
+chmod +x deploy/deploy.sh
+./deploy/deploy.sh
 ```
 Ya direct docker compose run karein:
 ```bash

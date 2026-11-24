@@ -5,8 +5,14 @@ set -e
 # E-Numerak Monitoring System - VPS Deployment Script
 # ==============================================================================
 
+# Ensure script always executes relative to the project root directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$PROJECT_ROOT"
+
 echo "=========================================================="
 echo " Starting E-Numerak Monitoring System Deployment...      "
+echo " Working directory: $PROJECT_ROOT"
 echo "=========================================================="
 
 # 1. Check if backend/.env exists
